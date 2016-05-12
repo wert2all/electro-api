@@ -6,7 +6,7 @@
  * @license     {license_link}
  */
 
-namespace wert2all\electro_api;
+namespace wert2all\electro_api\Framework;
 
 
 class Request
