@@ -13,26 +13,27 @@ use wert2all\electro_api\Framework\Controllers\Virtual\AbstractController;
 use wert2all\electro_api\Framework\Controllers\Virtual\IController;
 use wert2all\electro_api\Framework\Exception\ControllerException;
 use wert2all\electro_api\Framework\Request;
+use wert2all\electro_api\Framework\Request\IRequest;
 
 class Api extends AbstractController implements IController
 {
 
     /**
-     * @param Request $request
+     * @param IRequest $request
      * @return bool
      */
-    public function isCurrent(Request $request)
+    public function isCurrent(IRequest $request)
     {
         // TODO: Implement isCurrent() method.
         return false;
     }
 
     /**
-     * @param Request $request
+     * @param IRequest $request
      * @return void
      * @throws ControllerException
      */
-    public function run(Request $request)
+    public function run(IRequest $request)
     {
         // TODO: Implement run() method.
     }

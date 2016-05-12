@@ -13,6 +13,7 @@ use ArrayIterator;
 use ArrayObject;
 use wert2all\electro_api\Framework\Controllers\Virtual\AbstractExceptionController;
 use wert2all\electro_api\Framework\Controllers\Virtual\IController;
+use wert2all\electro_api\Framework\Request\IRequest;
 
 class Route
 {
@@ -20,17 +21,17 @@ class Route
     protected $controllers;
     /** @var IController */
     protected $defaultController;
-    /** @var Request */
+    /** @var IRequest */
     protected $request;
     /** @var  AbstractExceptionController */
     protected $exceptionController = null;
 
     /**
      * Route constructor.
-     * @param Request $request
+     * @param IRequest $request
      * @param IController $defaultController
      */
-    public function __construct(Request $request, IController $defaultController)
+    public function __construct(IRequest $request, IController $defaultController)
     {
 
         $this->controllers = new ArrayObject();

@@ -11,6 +11,7 @@ namespace wert2all\electro_api\Framework\Controllers\Virtual;
 
 use wert2all\electro_api\Framework\Exception\ControllerException;
 use wert2all\electro_api\Framework\Request;
+use wert2all\electro_api\Framework\Request\IRequest;
 
 abstract class AbstractExceptionController implements IExceptionController
 {
@@ -18,10 +19,10 @@ abstract class AbstractExceptionController implements IExceptionController
     protected $error;
 
     /**
-     * @param Request $request
+     * @param IRequest $request
      * @return bool
      */
-    public function isCurrent(Request $request)
+    public function isCurrent(IRequest $request)
     {
         return true;
     }
@@ -37,10 +38,10 @@ abstract class AbstractExceptionController implements IExceptionController
     }
 
     /**
-     * @param Request $request
+     * @param IRequest $request
      * @throws ControllerException
      */
-    final public function run(Request $request)
+    final public function run(IRequest $request)
     {
         if (is_null($this->error)) {
             throw new ControllerException("Cant get a Exception object.");
@@ -48,5 +49,9 @@ abstract class AbstractExceptionController implements IExceptionController
         $this->throwException($request);
     }
 
-    abstract protected function throwException(Request $request);
+    /**
+     * @param IRequest $request
+     * @return void
+     */
+    abstract protected function throwException(IRequest $request);
 }

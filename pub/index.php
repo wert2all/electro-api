@@ -8,7 +8,7 @@ use wert2all\electro_api\Specific\Controllers\ThrowError;
 
 require "../vendor/autoload.php";
 
-$route = new Route(new Request(), new Error404());
+$route = new Route(new Request\HttpRequest(), new Error404());
 
 $route->addController(new Api())
     ->setExceptionController(new ThrowError());

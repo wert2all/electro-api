@@ -13,26 +13,27 @@ use wert2all\electro_api\Framework\Controllers\Virtual\AbstractController;
 use wert2all\electro_api\Framework\Controllers\Virtual\IController;
 use wert2all\electro_api\Framework\Exception\ControllerException;
 use wert2all\electro_api\Framework\Request;
+use wert2all\electro_api\Framework\Request\IRequest;
 
 class Error404 extends AbstractController implements IController
 {
 
     /**
-     * @param Request $request
+     * @param IRequest $request
      * @return bool
      */
-    public function isCurrent(Request $request)
+    public function isCurrent(IRequest $request)
     {
         return true;
     }
 
     /**
-     * @param Request $request
+     * @param IRequest $request
      * @param \Throwable $exception
      * @return void
      * @throws ControllerException
      */
-    public function run(Request $request)
+    public function run(IRequest $request)
     {
         echo "404";
     }

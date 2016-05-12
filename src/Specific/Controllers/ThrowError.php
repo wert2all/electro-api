@@ -11,11 +11,15 @@ namespace wert2all\electro_api\Specific\Controllers;
 
 use wert2all\electro_api\Framework\Controllers\Virtual\AbstractExceptionController;
 use wert2all\electro_api\Framework\Request;
+use wert2all\electro_api\Framework\Request\IRequest;
 
 class ThrowError extends AbstractExceptionController
 {
 
-    protected function throwException(Request $request)
+    /**
+     * @param IRequest $request
+     */
+    protected function throwException(IRequest $request)
     {
         echo $this->error->getMessage();
     }
