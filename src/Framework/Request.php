@@ -8,7 +8,6 @@
 
 namespace wert2all\electro_api\Framework;
 
-
 class Request
 {
 

@@ -8,8 +8,11 @@
 
 namespace wert2all\electro_api\Framework\Request;
 
-
 interface IRequest
 {
 
+    /**
+     * @return string
+     */
+    public function getBaseUrl();
 }

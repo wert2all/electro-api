@@ -8,9 +8,9 @@
 
 namespace wert2all\electro_api\Framework\Request;
 
-
 use ArrayObject;
 use wert2all\electro_api\Framework\Request\Http\Get;
+use wert2all\electro_api\Framework\Request\Http\ServerData;
 
 class HttpRequest implements IRequest
 {
@@ -23,30 +23,35 @@ class HttpRequest implements IRequest
 
     /**
      * HttpRequest constructor.
+     * @param ServerData $serverDataValue
      */
-    public function __construct()
+    public function __construct(ServerData $serverDataValue)
     {
         $this->baseArray = new ArrayObject();
         $this->otherUrlArray = new ArrayObject();
 
         $this->makeBaseUrl(
-            $this->removeGet($_SERVER['REQUEST_URI'])
+            $this->removeGet($serverDataValue->getRequestUrl()),
+            $serverDataValue->getScriptName()
         );
+
+        $this->updateSlashes();
     }
 
     /**
      * @param  string $url
+     * @param string $scriptName
      */
-    private function makeBaseUrl($url)
+    private function makeBaseUrl($url, $scriptName)
     {
         $url = $this->splitUrl($url);
 
         $diffFlag = false;
         $counter = 0;
 
-        $serverIterator = (new ArrayObject($this->splitUrl($_SERVER['SCRIPT_NAME'])))->getIterator();
+        $serverIterator = (new ArrayObject($this->splitUrl($scriptName)))->getIterator();
         while ($serverIterator->valid() and $diffFlag !== true) {
-            if ($serverIterator->current() == $url[$counter]) {
+            if (isset($url[$counter]) and $serverIterator->current() == $url[$counter]) {
                 $this->baseArray->append($serverIterator->current());
             } else {
                 $diffFlag = true;
@@ -77,5 +82,21 @@ class HttpRequest implements IRequest
             }
         }
         return $requestURL;
+    }
+
+    private function updateSlashes()
+    {
+        $arrayCopy = $this->baseArray->getArrayCopy();
+        if (end($arrayCopy) != "") {
+            $this->baseArray->append("");
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseUrl()
+    {
+        return implode("/", $this->baseArray->getArrayCopy());
     }
 }

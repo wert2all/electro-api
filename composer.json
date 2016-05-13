@@ -14,6 +14,12 @@
     }
   ],
   "version": "1.0",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/wert2all/phpDataValue.git"
+    }
+  ],
   "require-dev": {
     "phpunit/phpunit-mock-objects": "@stable",
     "phpunit/phpunit": "@stable",
@@ -35,6 +41,7 @@
     ]
   },
   "require": {
-    "php": ">=5.6.0"
+    "php": ">=5.6.0",
+    "wert2all/phpDataValue": ">=1.0"
   }
 }

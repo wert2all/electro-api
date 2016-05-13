@@ -8,7 +8,6 @@
 
 namespace wert2all\electro_api\Specific\Controllers;
 
-
 use wert2all\electro_api\Framework\Controllers\Virtual\AbstractController;
 use wert2all\electro_api\Framework\Controllers\Virtual\IController;
 use wert2all\electro_api\Framework\Exception\ControllerException;

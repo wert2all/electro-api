@@ -8,11 +8,10 @@
 
 namespace wert2all\electro_api\Framework;
 
-
-class _
+class Log
 {
 
-    public static function _($value)
+    public static function dump($value)
     {
         highlight_string(print_r($value, true));
     }
