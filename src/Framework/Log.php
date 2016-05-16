@@ -11,8 +11,14 @@ namespace wert2all\electro_api\Framework;
 class Log
 {
 
-    public static function dump($value)
+    public static function dump($value, $isCli = false)
     {
-        highlight_string(print_r($value, true));
+        $dump = print_r($value, true);
+        if ($isCli) {
+            var_dump($dump);
+        } else {
+            highlight_string($dump);
+        }
+
     }
 }
