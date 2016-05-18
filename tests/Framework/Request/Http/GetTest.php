@@ -6,7 +6,7 @@
  * Time: 20:10
  */
 
-namespace Framework\Request\Http;
+namespace wert2all\electro_api\Tests\Framework\Request\Http;
 
 use PHPUnit_Framework_TestCase;
 use wert2all\electro_api\Framework\Request\Http\Get;

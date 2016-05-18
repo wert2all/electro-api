@@ -6,7 +6,7 @@
  * @license     {license_link}
  */
 
-namespace Specific\Model;
+namespace wert2all\electro_api\Tests\Specific\Model;
 
 use PHPUnit_Framework_TestCase;
 use Specific\Model\Api\Builder;
