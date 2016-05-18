@@ -10,6 +10,7 @@ namespace wert2all\electro_api\Tests\Specific\Model;
 
 use PHPUnit_Framework_TestCase;
 use Specific\Model\Api\Builder;
+use Specific\Model\Api\DataValue\Api;
 use Specific\Model\Api\IApi;
 
 class ApiTest extends PHPUnit_Framework_TestCase
@@ -18,7 +19,7 @@ class ApiTest extends PHPUnit_Framework_TestCase
     public function testToArray()
     {
         /** @var IApi $api */
-        $api = (new Builder())->build();
+        $api = (new Builder(1))->build();
 
         $this->assertEquals(
             array(
