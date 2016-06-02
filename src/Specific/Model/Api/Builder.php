@@ -13,7 +13,7 @@ use Specific\Model\Api\DataValue\Api;
 class Builder
 {
 
-    public function __construct($data = null)
+    public function __construct($version)
     {
 
     }
