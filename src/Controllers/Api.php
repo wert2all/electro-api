@@ -6,7 +6,7 @@
  * @license     {license_link}
  */
 
-namespace wert2all\electro_api\Specific\Controllers;
+namespace wert2all\electro_api\Controllers;
 
 use wert2all\wFrame\Controllers\Virtual\AbstractController;
 use wert2all\wFrame\Controllers\Virtual\IController;
