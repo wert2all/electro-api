@@ -6,9 +6,9 @@
  * @license     {license_link}
  */
 
-namespace Specific\Model\Api\DataValue\Api;
+namespace wert2all\electro_api\Model\Api\DataValue\Api;
 
-use Specific\Model\Api\IApi;
+use wert2all\electro_api\Model\Api\IApi;
 
 class Data implements IApi
 {

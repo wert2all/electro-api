@@ -6,14 +6,14 @@
  * @license     {license_link}
  */
 
-namespace Specific\Model\Api\DataValue;
+namespace wert2all\electro_api\Model\Api\DataValue;
 
-use Specific\Model\Api\DataValue\Api\Data;
-use Specific\Model\Api\DataValue\Api\Error;
-use Specific\Model\Api\IApi;
+use wert2all\electro_api\Model\Api\DataValue\Api\Data;
+use wert2all\electro_api\Model\Api\DataValue\Api\Error;
 use wert2all\DataValue\AbstractDataValue;
 use wert2all\DataValue\Property;
 use wert2all\DataValue\Property\PropertyInterface;
+use wert2all\electro_api\Model\Api\IApi;
 
 class Api extends AbstractDataValue implements IApi
 {
