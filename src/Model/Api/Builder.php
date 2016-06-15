@@ -6,9 +6,9 @@
  * @license     {license_link}
  */
 
-namespace Specific\Model\Api;
+namespace wert2all\electro_api\Model\Api;
 
-use Specific\Model\Api\DataValue\Api;
+use wert2all\electro_api\Model\Api\DataValue\Api;
 
 class Builder
 {

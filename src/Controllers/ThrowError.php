@@ -6,11 +6,10 @@
  * @license     {license_link}
  */
 
-namespace wert2all\electro_api\Specific\Controllers;
+namespace wert2all\electro_api\Controllers;
 
-use wert2all\electro_api\Framework\Controllers\Virtual\AbstractExceptionController;
-use wert2all\electro_api\Framework\Request;
-use wert2all\electro_api\Framework\Request\IRequest;
+use wert2all\wFrame\Controllers\Virtual\AbstractExceptionController;
+use wert2all\wFrame\Request\IRequest;
 
 class ThrowError extends AbstractExceptionController
 {

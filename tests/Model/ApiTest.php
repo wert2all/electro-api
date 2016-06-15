@@ -6,12 +6,11 @@
  * @license     {license_link}
  */
 
-namespace wert2all\electro_api\Tests\Specific\Model;
+namespace wert2all\electro_api\Tests\Model;
 
 use PHPUnit_Framework_TestCase;
-use Specific\Model\Api\Builder;
-use Specific\Model\Api\DataValue\Api;
-use Specific\Model\Api\IApi;
+use wert2all\electro_api\Model\Api\Builder;
+use wert2all\electro_api\Model\Api\IApi;
 
 class ApiTest extends PHPUnit_Framework_TestCase
 {

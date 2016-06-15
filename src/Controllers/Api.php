@@ -8,11 +8,10 @@
 
 namespace wert2all\electro_api\Specific\Controllers;
 
-use wert2all\electro_api\Framework\Controllers\Virtual\AbstractController;
-use wert2all\electro_api\Framework\Controllers\Virtual\IController;
-use wert2all\electro_api\Framework\Exception\ControllerException;
-use wert2all\electro_api\Framework\Request;
-use wert2all\electro_api\Framework\Request\IRequest;
+use wert2all\wFrame\Controllers\Virtual\AbstractController;
+use wert2all\wFrame\Controllers\Virtual\IController;
+use wert2all\wFrame\Exception\ControllerException;
+use wert2all\wFrame\Request\IRequest;
 
 class Api extends AbstractController implements IController
 {
